@@ -27,11 +27,15 @@ namespace ByteBank
             GerenteDeConta andreza = new GerenteDeConta("122.122.122-12");
             andreza.Nome = "Andreza";
             andreza.Senha = "abc";
-            
+
+            ParceiroComercial parceiro = new ParceiroComercial();
+            parceiro.Senha = "123456";
+
+            sistemaInterno.Logar(parceiro, "123456");
             sistemaInterno.Logar(andreza, "abc");
             sistemaInterno.Logar(giovanna, "123");
         }
-
+          
         public static void CalcularBonificacao()
         {
             GerenciadorBonificacao gerenciadorBonificacao = new GerenciadorBonificacao();
